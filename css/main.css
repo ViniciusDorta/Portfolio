@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+/* Boot CSS */
+
+img {
+    width: 100%;
+    max-width: 300px;
+
+}
+
+.center {
+    max-width: 1280px;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+.w33 {
+    width: 33.3%;
+    padding: 0 10px;
+}
+
+.w50 {
+    max-width: 1280px;
+    padding: 0 2%;
+    width: 50%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+/*   Header   */
+
+header {
+    padding: 20px 0;
+    background: #3d437a;
+}
+
+.mobile {
+    display: none;
+}
+
+nav.desktop ul {
+    list-style-type: none;
+}
+
+nav.desktop li {
+    margin-top: 15px;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0 40px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-left: solid #fff;
+}
+
+nav.desktop a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Logomarca */
+
+header .logo {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*  Banner  */
+
+section.banner-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.banner-single {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+div.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(50, 50, 50, 0.5);
+}
+
+section.banner-container form {
+    width: 85%;
+    max-width: 600px;
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+section.banner-container form h2 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: center;
+}
+
+section.banner-container form input[type=email] {
+    width: 100%;
+    height: 66px;
+    margin-top: 10px;
+    background: #fff;
+    color: #333;
+    font-size: 22px;
+    padding-left: 10px;
+    border: none;
+}
+
+section.banner-container form input[type=submit] {
+    width: 100%;
+    height: 66px;
+    margin-top: 10px;
+    background: #00c59e;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+}
+
+/*   Botões banner   */
+
+.bullets {
+    position: absolute;
+    z-index: 5;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bullets span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 3.5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.bullets span.active-slider {
+    background: #5056a0;
+}
+
+/*  Conteúdo  */
+
+section.descricao-autor {
+    padding: 40px;
+}
+
+section.descricao-autor h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #444;
+}
+
+section.descricao-autor p {
+    font-size: 16px;
+    color: #444;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+section.especialidades {
+    padding: 40px 0;
+    background: #e2e2e2;
+}
+
+section.especialidades h2.title {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: #999;
+}
+
+.box-especialidade {
+    margin: 40px 0;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.box-especialidade i {
+    font-size: 50px;
+    color: #404580;
+}
+
+.box-especialidade h3 {
+    color: #bababa;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.box-especialidade p {
+    color: #444;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+hr {
+    border-top: 3px solid #5056a0;
+    border-bottom: 3px solid #5056a0;
+    padding: 1.5px;
+    background-color: #e2e2e2;
+}
+
+section.extras {
+    padding: 30px 0;
+    background: #404580;
+}
+
+.serviços-container,
+.depoimentos-container {
+    padding: 0 50px;
+}
+
+section.title {
+    color: #fff;
+    font-weight: 300;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.extras {
+    color: #fff;
+}
+
+.depoimento-single {
+    padding: 15px 0;
+    border-bottom: 3px solid #5056a0;
+}
+
+p.depoimento-descricao {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 300;
+}
+
+p.nome-autor {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.servicos ul {
+    margin: 20px 0;
+}
+
+.servicos li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+}
+
+/*  Footer  */
+
+footer {
+    background: #313462;
+    padding: 30px 0;
+}
+
+footer p {
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-weight: 16px;
+}
+
+/*   Contato   */
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+.contato-container {
+    text-align: center;
+}
+
+form.border-form {
+    box-sizing: border-box;
+    border: solid;
+    border-radius: 5px;
+    border-color: transparent;
+    box-shadow: 0 0 5px 3px #5056a0;
+    margin: 35px 0;
+    padding: 25px 25px;
+}
+
+.contato-container input[type=text],
+input[type=email] {
+    margin: 8px 0;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding-left: 8px;
+    font-size: 16px;
+    color: #444;
+    max-width: 800px;
+}
+
+.contato-container textarea {
+    margin: 8px 0;
+    width: 100%;
+    height: 120px;
+    border: 1px solid #ccc;
+    padding: 6px;
+    font-size: 16px;
+    color: #444;
+    max-width: 800px;
+    resize: vertical;
+}
+
+.contato-container input[type=submit] {
+    background-color: #00c59e;
+    width: 35%;
+    height: 40px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/*  ERRO 404  */
+
+section.error-404 {
+    min-height: 68vh;
+    text-align: center;
+    margin-top: 45px;
+    position: relative;
+}
+
+section.error-404 h1 {
+    font-size: 85px;
+    padding: 15px 0;
+    color: #444;
+}
+
+section.error-404 span {
+    color: #313462;
+}
+
+section.error-404 h2 {
+    font-size: 45px;
+    padding: 20px 0;
+    font-weight: 400;
+    color: #444;
+    border-top: 5px solid #3d437a;
+}
+
+section.error-404 p {
+    font-size: 20px;
+    padding: 30px 0;
+    font-weight: 300;
+}
+
+section.error-404 a {
+    font-weight: bold;
+    color: #5056a0;
+    text-decoration: none;
+}
+
+/*  Responsivo  */
+
+@media screen and (max-width: 768px) {
+    img {
+        float: none !important;
+        display: block;
+        margin: 0 auto;
+        max-width: 250px;
+    }
+
+    .w50 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .w33 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .box-especialidade {
+        margin: 0;
+        padding: 25px;
+    }
+
+    section.error-404 h1 {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav.desktop {
+        display: none;
+    }
+
+    nav.mobile {
+        display: block;
+    }
+
+    .botao-menu-mobile {
+        margin-top: 8px;
+        margin-right: 5px;
+        font-size: 24px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    nav.mobile ul {
+        top: 80px;
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        display: none;
+        text-align: center;
+    }
+
+    nav.mobile li {
+        font-weight: 300;
+        width: 100%;
+        display: block;
+        background-color: #404580;
+        border-bottom: 2px solid #5056a0;
+        font-size: 17px;
+        padding: 8px 0;
+    }
+
+    nav.mobile li a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+    }
+}
