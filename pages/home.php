@@ -7,13 +7,13 @@
     <!--banner-single-->
     <div class="overlay"></div>
     <!--overlay-->
-    <div class="center">
+    <!-- <div class="center">
         <form>
             <h2>Qual o seu melhor e-mail?</h2>
             <input type="email" name="email" required />
             <input type="submit" name="acao" value="Cadastrar" />
         </form>
-    </div>
+    </div> -->
     <!--center-->
     <div class="bullets">
     </div>

@@ -1,5 +1,5 @@
 <?php
-include('./config.php');
+include('./config/config.php');
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +32,13 @@ include('./config.php');
     }
 
     ?>
+
+    <div class="sucesso">
+        <p>Mensagem enviada com sucesso!</p>
+    </div>
+    <div class="overlay-loading">
+        <img src="/image/loader.gif">
+    </div><!--overlay-loading-->
 
     <header>
         <div class="center">
@@ -93,8 +100,9 @@ include('./config.php');
     <script src="https://kit.fontawesome.com/ccff9e51ab.js" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <script src="js/animacao.js"></script>
-    <script src="./js/maps.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4"></script>
+    <script src="js/envio-email.js"></script>
+    <!-- <script src="./js/maps.js"></script> -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4"></script> -->
 
     <?php if ($url == 'home') { ?>
         <script src="js/slider.js"></script>
