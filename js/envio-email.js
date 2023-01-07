@@ -18,6 +18,9 @@ $(function () {
                 setTimeout(() => {
                     $('.sucesso').fadeOut();
                 }, 3000);
+                setInterval(() => {
+                    location.reload();
+                }, 3000);
             } else {
                 $('.overlay-loading').fadeOut();
                 console.log("Ocorreu um erro ao enviar o e-mail.");
