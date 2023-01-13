@@ -16,19 +16,17 @@ class Email
         $this->mailer = new PHPMailer(true);
 
         // Configurações Servidor.
-        //$this->mailer->SMTPDebug = SMTP::DEBUG_SERVER;                          //Enable verbose debug output
         $this->mailer->isSMTP();                                                //Send using SMTP
-        $this->mailer->Host       = $host; //'smtp.hostinger.com';                       // Host -> Servidor de saída (SMTP)
-        $this->mailer->SMTPAuth   = true;                                       //Enable SMTP authentication
-        $this->mailer->Username   = $username; //'vinicius_o.dorta@viniciusdorta.com.br';    // Login do Servidor
-        $this->mailer->Password   = $senha; //'NDorta300499$';                            // Senha do Servidor
+        $this->mailer->Host       = $host;                                      // Host -> Servidor de saída (SMTP)
+        $this->mailer->SMTPAuth   = true;                                       // Enable SMTP authentication
+        $this->mailer->Username   = $username;                                  // Login do Servidor
+        $this->mailer->Password   = $senha;                                     // Senha do Servidor
         $this->mailer->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;                // SSL
         $this->mailer->Port       = 465;                                        // Porta (SMTP) 465
 
         // Dados envio e recebimento de e-mail.
-        $this->mailer->setFrom($username, $name);                       // e-mail e nome de quem envia
+        $this->mailer->setFrom($username, $name);
         $this->mailer->CharSet = 'UTF-8';
-        // Conteudo
         $this->mailer->isHTML(true);                                            // Permitir codigo HTML no e-mail
     }
 

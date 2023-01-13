@@ -14,7 +14,7 @@
                     self::$PDO->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                 } catch (Exception $e) 
                 {
-                    echo '<h1>Erro ao conectar ao banco de dados!</h1>';
+                    echo '<div class="erro-box">Erro ao conectar ao banco de dados!</div>';
                 }
             }
 
