@@ -1,2 +1,3 @@
-# Portfolio
-Bem Vindos ao Meu Portfolio!  🖥️🖱️  Welcome To The My Portfolio!
+# Bem Vindos ao meu Portfolio
+
+:construction: README IN PROGRESS :construction:
