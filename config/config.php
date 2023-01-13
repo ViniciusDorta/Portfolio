@@ -12,9 +12,3 @@
     define('INCLUDE_PATH', 'http://primeiroprojetobackend.test/');
     define('INCLUDE_PATH_PAINEL', INCLUDE_PATH . 'painel/');
 
-    define('HOST', 'localhost');
-    define('NOME', 'vineserver');
-    define('USER', 'root');
-    define('PASSWORD', 'NDorta300499');
-?>
-

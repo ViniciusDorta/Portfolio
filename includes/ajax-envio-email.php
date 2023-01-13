@@ -1,5 +1,7 @@
 <?php
 include('../config/config.php');
+require __DIR__ . '/../vendor/autoload.php';
+Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/../')->load();
 
 $data = array();
 
@@ -10,8 +12,8 @@ foreach ($_POST as $key => $value) {
     $corpo .= "<hr>";
 }
 $info = array('header' => $assunto, 'content' => $corpo);
-$mail = new Email('smtp.hostinger.com', 'vinicius_o.dorta@viniciusdorta.com.br', 'NDorta300499$', 'Vinicius');
-$mail->addAdress('vinicius_o.dorta@viniciusdorta.com.br', 'Vinicius');
+$mail = new Email(getenv('HOST_SEVER'), getenv('USER_SERVER'), getenv('PASS_SERVER'), getenv('NAME_SERVER'));
+$mail->addAdress(getenv('USER_SERVER'), getenv('NAME_SERVER'));
 $mail->formatarEmail($info);
 if ($mail->enviarEmail()) {
     $data['sucesso'] = true;

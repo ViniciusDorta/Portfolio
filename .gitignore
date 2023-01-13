@@ -1,4 +1,2 @@
 /vendor/
 .env
-/config/config.php
-/includes/ajax-envio-email.php
