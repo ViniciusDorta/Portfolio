@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html,
+body {
+    height: 100%;
+    background: #ccc;
+}
+
+/*   LOGIN   */
+
+.box-login {
+    max-width: 650px;
+    width: 95%;
+    padding: 20px 2%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #5056a0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.box-login h2 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0;
+    padding: 5px;
+    border-bottom: solid #5056a0;
+}
+
+form {
+    padding: 20px;
+}
+
+.box-login input[type=email],
+input[type=password] {
+    font-size: 18px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding-left: 10px;
+    margin-top: 15px;
+    font-weight: 200;
+}
+
+.box-login input[type=submit] {
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 25px 40%;
+    padding: 10px 30px;
+    background: #5056a0;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*   MENSAGEM ERRO   */
+
+.erro-box i {
+    padding-right: 10px;
+}
+
+.erro-box {
+    width: 100%;
+    padding: 4px 2%;
+    text-align: center;
+    background: #ff0000;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/*   CONTROLE-PAINEL   */
+
+.clear {
+    clear: both;
+}
+
+.center {
+    width: 100%;
+    padding: 0 1%;
+    margin: 0 auto;
+}
+
+header {
+    float: left;
+    height: 8%;
+    background: #3d437a;
+    width: 80%;
+}
+
+.logout {
+    float: right;
+    padding: 1% 1%;
+}
+
+.logout a {
+    color: #fff;
+    font-size: 22px;
+}
+
+/*   MENU-PAINEL   */
+
+
+div.menu {
+    overflow-y: auto;
+    height: 100%;
+    background: #404589;
+    float: left;
+    width: 20%;
+    padding: 20px;
+}
+
+.btn-menu {
+    float: left;
+    cursor: pointer;
+    font-size: 22px;
+    padding: 1% 0.5%;
+    color: #fff;
+}
+
+div.box-usuario {
+    text-align: center;
+}
+
+.avatar-usuario {
+    text-align: left;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid;
+}
+
+.avatar-usuario i {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #000;
+}
+
+.nome-usuario {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.nome-usuario p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}

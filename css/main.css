@@ -12,6 +12,18 @@ body {
     height: 100vh;
 }
 
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5056a0;
+}
+
 /* Boot CSS */
 
 img {
@@ -100,6 +112,7 @@ section.banner-container {
 }
 
 .banner-single {
+    display: none;
     position: absolute;
     left: 0;
     top: 0;
@@ -307,6 +320,10 @@ footer p {
     text-align: center;
     font-weight: 400;
     font-weight: 16px;
+}
+
+.container-footer a {
+    text-decoration: none;
 }
 
 /*   Contato   */

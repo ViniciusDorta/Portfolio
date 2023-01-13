@@ -78,7 +78,7 @@ include('./config/config.php');
         if (file_exists('pages/' . $url . '.php')) {
             include('pages/' . $url . '.php');
         } else {
-            if ($url != 'especialidades' && $url != 'extras') {
+            if ($url != 'especialidades' && $url != 'extras' && $url != 'login') {
                 //Podemos fazer o que quiser, pois a página não existe.
                 include('pages/404.php');
             } else {
@@ -91,7 +91,9 @@ include('./config/config.php');
 
     <footer>
         <div class="center">
-            <p>© Todos os direitos reservados</p>
+            <div class="container-footer">
+                <a href="<?php echo INCLUDE_PATH_PAINEL; ?>login.php"><p>© Todos os direitos reservados</p></a>
+            </div>
         </div>
         <!--center-->
     </footer>
@@ -101,12 +103,7 @@ include('./config/config.php');
     <script src="js/scripts.js"></script>
     <script src="js/animacao.js"></script>
     <script src="js/envio-email.js"></script>
-    <!-- <script src="./js/maps.js"></script> -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4"></script> -->
-
-    <?php if ($url == 'home') { ?>
-        <script src="js/slider.js"></script>
-    <?php } ?>
+    <script src="js/slider.js"></script>
 
 </body>
 
