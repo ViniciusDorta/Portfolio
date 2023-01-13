@@ -44,6 +44,7 @@
 <!--descricao-autor-->
 
 <section id="especialidades" class="especialidades">
+
     <div class="center">
         <h2 class="title">
             Minhas Especialidades Frontend
@@ -75,6 +76,7 @@
         <div class="clear"></div>
     </div>
     <!--center-->
+
 </section>
 <!--especialidades-->
 
@@ -83,6 +85,7 @@
 <hr>
 
 <section class="especialidades">
+
     <div class="center">
         <h2 class="title">
             Minhas Especialidades Backend
@@ -114,10 +117,12 @@
         <div class="clear"></div>
     </div>
     <!--center-->
+
 </section>
 <!--especialidades-->
 
 <section id="extras" class="extras">
+
     <div class="center">
         <div class="w50 left">
             <h2 class="title">
@@ -148,5 +153,6 @@
         <!--clear-->
     </div>
     <!--center-->
+    
 </section>
 <!--especialidades-->

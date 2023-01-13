@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Desenvolvimento Web, Backend, Frontend, DankiCode">
     <meta name="description" content="Website desenvolvido com base nas aulas do CEO DankiCode Guilherme, curso Desenvolvimento Web Completo. ">
-    <link rel="stylesheet" type="text/css" href="css/main2.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="icon" href="../favicon.ico" type="image/x-icon">
 
     <title>Backend Portfolio</title>
@@ -21,7 +21,7 @@
         <form method="POST">
             <input type="email" name="email" placeholder="E-mail..." required />
             <input type="password" name="password" placeholder="Senha..." required />
-            <input type="submit" name="acao" value="Entrar!">
+            <input type="submit" name="acao" value="Entrar">
         </form>
     </div><!--box-login-->
 

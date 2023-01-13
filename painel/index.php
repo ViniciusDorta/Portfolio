@@ -7,4 +7,3 @@
     } else {
         include('main.php');
     }
-?>

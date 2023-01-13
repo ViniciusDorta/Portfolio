@@ -42,16 +42,22 @@ form {
     padding: 20px;
 }
 
+.box-login input[type=email]:focus,
+input[type=password]:focus {
+    outline: none;
+}
+
 .box-login input[type=email],
 input[type=password] {
-    font-size: 18px;
+    font-size: 20px;
     width: 100%;
     height: 40px;
-    border: 1px solid #ccc;
+    border: 1.5px solid #5056a0;
     border-radius: 10px;
     padding-left: 10px;
     margin-top: 15px;
     font-weight: 200;
+    color: #5056a0;
 }
 
 .box-login input[type=submit] {
@@ -64,8 +70,8 @@ input[type=password] {
     padding: 10px 30px;
     background: #5056a0;
     color: #fff;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 /*   MENSAGEM ERRO   */
@@ -97,7 +103,8 @@ input[type=password] {
 }
 
 header {
-    float: left;
+    position: relative;
+    left: 20%;
     height: 8%;
     background: #3d437a;
     width: 80%;
@@ -115,12 +122,14 @@ header {
 
 /*   MENU-PAINEL   */
 
-
 div.menu {
+    overflow-x: hidden;
     overflow-y: auto;
     height: 100%;
     background: #404589;
-    float: left;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 20%;
     padding: 20px;
 }
@@ -165,4 +174,53 @@ div.box-usuario {
     color: #fff;
     font-size: 18px;
     font-weight: 400;
+}
+
+/*   CONTEUDO-PAINEL   */
+
+.w100 {
+    width: 100%;
+}
+
+.w50 {
+    width: 49%;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.content {
+    position: relative;
+    width: 80%;
+    left: 20%;
+    padding: 10px;
+}
+
+.box-content {
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+        left: 0;
+    }
+
+    header {
+        left: 0;
+        width: 100%;
+    }
 }
