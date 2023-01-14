@@ -1,3 +1,6 @@
+# Pastas
 /vendor/
-.env
 /painel/uploads/
+
+# Arquivos
+.env
