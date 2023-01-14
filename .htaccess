@@ -2,5 +2,8 @@ RewriteEngine On
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+RewriteRule .env$ - [R=403,NC,L]
+RewriteRule .json$ - [R=403,NC,L]
+RewriteRule .lock$ - [R=403,NC,L]
 
 Options -Indexes
