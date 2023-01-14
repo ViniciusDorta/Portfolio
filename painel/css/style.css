@@ -13,6 +13,26 @@ body {
     background: #ccc;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-top: 1px solid #3d437a;
+    border-bottom: 1px solid #3d437a;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5e64b6;
+    border-radius: 50px;
+}
+
 /*   LOGIN   */
 
 .box-login {
@@ -66,8 +86,20 @@ input[type=password] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 25px 40%;
-    padding: 10px 30px;
+    margin: 10% 15%;
+    padding: 10px 50px;
+    background: #5056a0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-login a {
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 11px 50px;
     background: #5056a0;
     color: #fff;
     font-size: 18px;
@@ -131,7 +163,11 @@ div.menu {
     left: 0;
     top: 0;
     width: 20%;
-    padding: 20px;
+    padding: 10px 0;
+}
+
+.menu-wraper {
+    width: 100%;
 }
 
 .btn-menu {
@@ -149,8 +185,8 @@ div.box-usuario {
 .avatar-usuario {
     text-align: left;
     display: inline-block;
-    width: 130px;
-    height: 130px;
+    width: 125px;
+    height: 125px;
     border-radius: 50%;
     border: 2px solid;
 }
@@ -165,6 +201,24 @@ div.box-usuario {
     color: #000;
 }
 
+.image-usuario {
+    display: inline-block;
+    width: 125px;
+    height: 125px;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid;
+}
+
+.image-usuario img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
 .nome-usuario {
     text-align: center;
     margin-top: 10px;
@@ -172,8 +226,32 @@ div.box-usuario {
 
 .nome-usuario p {
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
+}
+
+.items-menu {
+    margin-top: 20px;
+}
+
+.items-menu h2 {
+    text-align: left;
+    font-weight: 300;
+    font-size: 16px;
+    color: #fff;
+    background: #5056a0;
+    border: 1px solid #3d437a;
+    padding: 8px;
+}
+
+.items-menu a {
+    display: block;
+    padding: 8px;
+    font-weight: 300;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1.5px solid #ccc;
 }
 
 /*   CONTEUDO-PAINEL   */
@@ -208,11 +286,42 @@ div.box-usuario {
     border-radius: 50px;
 }
 
-@media screen and (max-width: 768px) {
+.box-content h2 {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 600;
+}
 
-    .menu {
-        display: none;
-    }
+.box-content i {
+    padding: 15px;
+}
+
+.box-metricas {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.box-metricas-single {
+    border-radius: 15px;
+    background-color: #5e64b6;
+    color: #fff;
+    margin: 20px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+}
+
+.box-metricas-single h2 {
+    text-align: center;
+}
+
+.box-metricas-single p {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 820px) {
 
     .content {
         width: 100%;

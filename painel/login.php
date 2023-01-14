@@ -21,7 +21,10 @@
         <form method="POST">
             <input type="email" name="email" placeholder="E-mail..." required />
             <input type="password" name="password" placeholder="Senha..." required />
-            <input type="submit" name="acao" value="Entrar">
+            <div class="btn-login">
+                <input type="submit" name="acao" value="Entrar">
+                <a href="<?php echo INCLUDE_PATH; ?>">Home</a>
+            </div>
         </form>
     </div><!--box-login-->
 

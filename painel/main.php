@@ -39,6 +39,22 @@
                 <p><?php echo $cargo = Cargo::pegaCargo($_SESSION['cargo']); ?></p>
             </div>
         </div>
+
+        <div class="items-menu">
+            <h2>Cadastro</h2>
+            <a href="">Cadastrar Depoimento</a>
+            <a href="">Cadastrar Serviço</a>
+            <a href="">Cadastrar Slides</a>
+            <h2>Gestão</h2>
+            <a href="">Listar Depoimentos</a>
+            <a href="">Listar Serviços</a>
+            <a href="">Listar Slides</a>
+            <h2>Administração do Painel</h2>
+            <a href="">Edição Usuário</a>
+            <a href="">Adicionar Usuário</a>
+            <h2>Configuração Geral</h2>
+            <a href="">Editar</a>
+        </div>
     </div>
 </div>
 
@@ -56,16 +72,36 @@
 
 <div class="content">
     <div class="box-content left w100">
+        <h2><i class="fa-solid fa-house-chimney"></i> Painel de Controle - VineServer</h2>
 
+        <div class="box-metricas">
+            <div class="box-metricas-single">
+                <div class="box-metricas-wraper">
+                    <h2>Usuários Online</h2>
+                    <p><i class="fa-solid fa-user"></i> ?</p>
+                </div>
+            </div>
+            <div class="box-metricas-single">
+                <div class="box-metricas-wraper">
+                    <h2>Total de Visitas</h2>
+                    <p><i class="fa-solid fa-users"></i> ?</p>
+                </div>
+            </div>
+            <div class="box-metricas-single">
+                <div class="box-metricas-wraper">
+                    <h2>Visitas Hoje</h2>
+                    <p><i class="fa-solid fa-users-line"></i> ?</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
     </div>
 
-    <div class="box-content left w50">
-        
+    <!-- <div class="box-content left w50"> 
     </div>
 
     <div class="box-content right w50">
-        
-    </div>
+    </div> -->
 
     <div class="clear"></div>
 </div>
