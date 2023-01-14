@@ -62,10 +62,9 @@
 <br />
 
 <h2 id="autor">👨‍💻 Autor</h2>
----
 
-<a href="https://github.com/ViniciusDorta">
- <img src="https://avatars.githubusercontent.com/u/69944075?s=400&u=48db8181c4a344684fd23c5b604b9828acad442d&v=4" style="border-radius:50%;" width="100px;" />
+ <a href="https://github.com/ViniciusDorta">
+ <img src="https://avatars.githubusercontent.com/u/69944075?s=400&u=48db8181c4a344684fd23c5b604b9828acad442d&v=4" style="border-radius:50%; !important" width="100px;" />
  <br />
  <sub><b>Vinicius Dorta</b></sub></a> <a href="https:/viniciusdorta.com.br/" title="Portfolio">🚀</a>
  
