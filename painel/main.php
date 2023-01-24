@@ -42,7 +42,7 @@
 
         <div class="items-menu">
             <h2>Cadastro</h2>
-            <a href="">Cadastrar Depoimento</a>
+            <a href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimentos">Cadastrar Depoimento</a>
             <a href="">Cadastrar Serviço</a>
             <a href="">Cadastrar Slides</a>
             <h2>Gestão</h2>
@@ -71,39 +71,9 @@
 </header>
 
 <div class="content">
-    <div class="box-content left w100">
-        <h2><i class="fa-solid fa-house-chimney"></i> Painel de Controle - VineServer</h2>
+    
+    <?php Painel::loadPage(); ?>
 
-        <div class="box-metricas">
-            <div class="box-metricas-single">
-                <div class="box-metricas-wraper">
-                    <h2>Usuários Online</h2>
-                    <p><i class="fa-solid fa-user"></i> ?</p>
-                </div>
-            </div>
-            <div class="box-metricas-single">
-                <div class="box-metricas-wraper">
-                    <h2>Total de Visitas</h2>
-                    <p><i class="fa-solid fa-users"></i> ?</p>
-                </div>
-            </div>
-            <div class="box-metricas-single">
-                <div class="box-metricas-wraper">
-                    <h2>Visitas Hoje</h2>
-                    <p><i class="fa-solid fa-users-line"></i> ?</p>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </div>
-
-    <!-- <div class="box-content left w50"> 
-    </div>
-
-    <div class="box-content right w50">
-    </div> -->
-
-    <div class="clear"></div>
 </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>

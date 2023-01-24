@@ -1,3 +1,5 @@
+$(document).load("includes/ajax-usuario-online.php");
+
 $(function () {
     //Aqui vai todo o código de javascript
     $('nav.mobile').click(function () {
