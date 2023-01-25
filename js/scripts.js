@@ -1,4 +1,4 @@
-$(document).load("includes/ajax-usuario-online.php");
+$(document).load("includes/ajax-usuario-online.php").load("includes/ajax-contador-visitas.php");
 
 $(function () {
     //Aqui vai todo o código de javascript

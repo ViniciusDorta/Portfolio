@@ -41,19 +41,30 @@
         </div>
 
         <div class="items-menu">
-            <h2>Cadastro</h2>
-            <a href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimentos">Cadastrar Depoimento</a>
-            <a href="">Cadastrar Serviço</a>
-            <a href="">Cadastrar Slides</a>
-            <h2>Gestão</h2>
-            <a href="">Listar Depoimentos</a>
-            <a href="">Listar Serviços</a>
-            <a href="">Listar Slides</a>
-            <h2>Administração do Painel</h2>
-            <a href="">Edição Usuário</a>
-            <a href="">Adicionar Usuário</a>
-            <h2>Configuração Geral</h2>
-            <a href="">Editar</a>
+            <select name="menu-cad" id="menu_cad">
+                <option selected disabled hidden>Cadastro</option>
+                <div class="options-custom"><option value=""><a href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimentos">Cadastrar Depoimento</a></option></div>
+                <option value=""><div class="options-custom"><a href="">Cadastrar Serviço</a></div></option>
+                <option value=""><div class="options-custom"><a href="">Cadastrar Slides</a></div></option>
+            </select>
+            <hr>
+            <select name="menu-listar" id="menu_listar">
+                <option selected disabled hidden>Gestão</option>
+                <option value=""><a href="">Listar Depoimentos</a></option>
+                <option value=""><a href="">Listar Serviços</a></option>
+                <option value=""><a href="">Listar Slides</a></option>
+            </select>
+            <hr>
+            <select name="menu-admin" id="menu_admin">
+                <option selected disabled hidden>Administração do Painel</option>
+                <option value=""><a href="">Edição Usuário</a></option>
+                <option value=""><a href="">Adicionar Usuário</a></option>
+            </select>
+            <hr>
+            <select name="menu-config" id="menu_config">
+                <option selected disabled hidden>Configuração Geral</option>
+                <option value=""><a href="">Editar</a></option>
+            </select>
         </div>
     </div>
 </div>

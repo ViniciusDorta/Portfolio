@@ -23,13 +23,13 @@ body {
 
 ::-webkit-scrollbar-track {
     background: #fff;
-    border-top: 1px solid #3d437a;
-    border-bottom: 1px solid #3d437a;
+    border-top: 3px solid #7B68EE;
+    border-bottom: 3px solid #7B68EE;
     border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #5e64b6;
+    background: #7B68EE;
     border-radius: 50px;
 }
 
@@ -255,6 +255,27 @@ div.box-usuario {
     border-bottom: 1.5px solid #ccc;
 }
 
+/*   MENU LABEL   */
+
+select {
+    color: #fff;
+    background-color: #5056a0;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.options-custom a {
+    border-bottom: 2px solid #fff;
+}
+
+hr {
+    border: 2px solid #3d437a;
+}
+
 /*   CONTEUDO-PAINEL   */
 
 .w100 {
@@ -305,7 +326,7 @@ div.box-usuario {
 
 .box-metricas-single {
     border-radius: 15px;
-    background-color: #5e64b6;
+    background-color: #7B68EE;
     color: #fff;
     margin: 20px;
     padding: 15px;
@@ -330,8 +351,9 @@ div.box-usuario {
 }
 
 .row:nth-of-type(1) {
-    font-weight: bold;
-    border-bottom: 1px solid #333;
+    font-weight: 500;
+    color: #fff;
+    background-color: #7B68EE;
 }
 
 .row {
@@ -340,7 +362,7 @@ div.box-usuario {
     justify-content: space-between;
     color: #777;
     border-bottom: 1px solid #ccc;
-    padding: 25px 0;
+    padding: 10px 0;
 }
 
 .col {
