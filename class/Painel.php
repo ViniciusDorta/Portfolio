@@ -56,4 +56,13 @@
             return $sql->fetchAll();
         }
 
+        public static function alert($type, $message)
+        {
+            if ($type == 'sucesso') {
+                echo '<div class="box-alert sucesso"><i class="fa-solid fa-check"></i> ' . $message . '</div>';
+            } else if ($type == 'erro') {
+                echo '<div class="box-alert erro"><i class="fa-solid fa-xmark"></i> ' . $message . '</div>';
+            }
+        }
+
     }
