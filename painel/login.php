@@ -43,7 +43,7 @@
             $info = $sql->fetch();
 
             $_SESSION['login'] = true;
-            $_SESSION['email'] = $user;
+            $_SESSION['user'] = $user;
             $_SESSION['password'] = $password;
             $_SESSION['nome'] = $info['nome'];
             $_SESSION['cargo'] = $info['cargo'];

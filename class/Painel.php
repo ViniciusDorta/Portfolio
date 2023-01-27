@@ -65,4 +65,32 @@
             }
         }
 
+        public static function imgValid($image)
+        {
+            if (($image['type'] == 'image/jpeg') || ($image['type'] == 'image/jpg') || ($image['type'] == 'image/png')) {
+                $tamanho = intval($image['size']/1024);
+                if ($tamanho < 300) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        public static function uploadFile($file)
+        {
+            if (move_uploaded_file($file['tmp_name'], '../painel/uploads/' . $file['name'])) {
+                return $file['name'];
+            } else {
+                return false;
+            }
+        }
+
+        public static function deleteFile($file)
+        {
+            @unlink('uploads/' . $file);
+        }
+
     }

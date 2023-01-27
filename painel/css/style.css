@@ -370,7 +370,8 @@ div.box-usuario {
 
 /*   EDITAR USUARIO   */
 
-.box-content h2 {
+.box-content h1 {
+    font-size: 24px;
     border-bottom: 2px solid #000;
 }
 

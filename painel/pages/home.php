@@ -35,10 +35,10 @@
     <div class="table-responsive">
         <div class="row">
             <div class="col">
-                <span>IP</span>
+                <p>IP</p>
             </div>
             <div class="col">
-                <span>Última ação</span>
+                <p>Última ação</p>
             </div>
         </div>
 
@@ -48,10 +48,10 @@
         ?>
             <div class="row">
                 <div class="col">
-                    <span><?php echo $ocult = substr($value['ip'], 0, -4) . '****'; ?></span>
+                    <p><?php echo $ocult = substr($value['ip'], 0, -4) . '****'; ?></p>
                 </div>
                 <div class="col">
-                    <span><?php echo date('d/m/Y H:i:s',strtotime($value['ultima_acao'])); ?></span>
+                    <p><?php echo date('d/m/Y H:i:s',strtotime($value['ultima_acao'])); ?></p>
                 </div>
             </div>  
         <?php } ?>
