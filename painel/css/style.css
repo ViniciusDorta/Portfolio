@@ -249,6 +249,21 @@ div.box-usuario {
     font-weight: 400;
 }
 
+.nome-usuario a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.menu-active {
+    background-color: #747efb;
+}
+
+.menu-active::before {
+    content: '➤ ';
+}
+
 /*   MENU LABEL   */
 
 .items-menu {

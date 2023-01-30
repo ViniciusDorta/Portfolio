@@ -48,7 +48,7 @@
             $_SESSION['nome'] = $info['nome'];
             $_SESSION['cargo'] = $info['cargo'];
             $_SESSION['img'] = $info['img'];
-            header('Location: '.INCLUDE_PATH_PAINEL.'index.php');
+            header('Location: '.INCLUDE_PATH_PAINEL.'home');
             die();
         } else {
             echo '<div class="erro-box"><i class="fa-solid fa-xmark"></i></i>Usuário ou senha incorretos<i class="fa-solid fa-exclamation"></i></div>';

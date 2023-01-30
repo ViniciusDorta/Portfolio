@@ -7,8 +7,8 @@
         {
             $arr = [
                 '0' => 'Normal',
-                '1' => 'Master',
-                '2' => 'Administrador'
+                '1' => 'Administrador',
+                '2' => 'Master'
             ];
 
             return $arr[$cargo];

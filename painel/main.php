@@ -36,27 +36,27 @@
             <?php endif ; ?>
             <div class="nome-usuario">
                 <p><?php echo $_SESSION['nome']; ?></p>
-                <p><?php echo $cargo = Cargo::pegaCargo($_SESSION['cargo']); ?></p>
+                <a <?php selecionadoMenu('home'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>home"><?php echo $cargo = Cargo::pegaCargo($_SESSION['cargo']); ?></a>
             </div>
         </div>
 
         <div class="items-menu">
             <h2>Cadastro</h2>
-            <a href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimentos">Cadastrar Depoimento</a>
-            <a href="">Cadastrar Serviço</a>
-            <a href="">Cadastrar Slides</a>
+            <a <?php selecionadoMenu('cadastrar-depoimentos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimentos">Cadastrar Depoimentos</a>
+            <a <?php selecionadoMenu('cadastrar-servicos'); ?> href="">Cadastrar Serviços</a>
+            <a <?php selecionadoMenu('cadastrar-slides'); ?> href="">Cadastrar Slides</a>
         
             <h2>Gestão</h2>
-            <a href="">Listar Depoimentos</a>
-            <a href="">Listar Serviços</a>
-            <a href="">Listar Slides</a>
+            <a <?php selecionadoMenu('listar-depoimentos'); ?> href="">Listar Depoimentos</a>
+            <a <?php selecionadoMenu('listar-servicos'); ?> href="">Listar Serviços</a>
+            <a <?php selecionadoMenu('listar-slides'); ?> href="">Listar Slides</a>
         
             <h2>Administração do Painel</h2>
-            <a href="<?php echo INCLUDE_PATH_PAINEL ?>editar-usuario">Editar Usuário</a>
-            <a href="">Adicionar Usuário</a>
+            <a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>editar-usuario">Editar Usuário</a>
+            <a <?php selecionadoMenu('adicionar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>adicionar-usuario">Adicionar Usuário</a>
 
             <h2>Configuração Geral</h2>
-            <a href="">Editar</a>
+            <a <?php selecionadoMenu('config-editar'); ?> href="">Editar</a>
         </div>
     </div>
 </div>
