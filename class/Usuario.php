@@ -13,4 +13,9 @@
             }
         }
 
+        public static function existsUser($email)
+        {
+            
+        }
+
     }

@@ -46,7 +46,7 @@
         <div class="form-group">
             <input type="password" name="password" value="<?php echo $_SESSION['password']; ?>" placeholder="Alterar senha..." required />
         </div>
-        <div class="form-group">
+        <div class="form-group label-content">
             <input type="file" id="img" name="img" />
             <input type="hidden" name="img_atual" value="<?php echo $_SESSION['img']; ?>">
             <label for="img">Trocar Foto</label>
