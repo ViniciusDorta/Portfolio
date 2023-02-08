@@ -25,10 +25,12 @@
                 Painel::alert('erro', 'Cargo inválido!');
             } else if(Painel::imgValid($img) == false){
                 Painel::alert('erro', 'Formato de imagem inválida!');
-            } else if(Painel::existsUser($email)){
+            } else if(Usuario::existsUser($email)){
                 Painel::alert('erro', 'Usuário já cadastrado!');
             } else {
                 $usuario = new Usuario();
+                $img = Painel::uploadFile($img);
+                $usuario->insertUser($email, $password, $img, $nome, $cargo);
                 Painel::alert('sucesso', 'Cadastro de '.$nome.' realizado com sucesso!');
             }
         }

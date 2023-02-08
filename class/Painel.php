@@ -81,8 +81,10 @@
 
         public static function uploadFile($file)
         {
-            if (move_uploaded_file($file['tmp_name'], '../painel/uploads/' . $file['name'])) {
-                return $file['name'];
+            $formatoArquivo = explode('.', $file['name']);
+            $imgNome = uniqid().'.'.$formatoArquivo[count($formatoArquivo) -1];
+            if (move_uploaded_file($file['tmp_name'], '../painel/uploads/' . $imgNome)) {
+                return $imgNome;
             } else {
                 return false;
             }

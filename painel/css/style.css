@@ -472,3 +472,9 @@ select {
         width: 100%;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .w50 {
+        width: 100%;
+    }
+}
