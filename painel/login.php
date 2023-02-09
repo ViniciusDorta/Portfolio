@@ -1,5 +1,23 @@
 <?php
     include('../config/config.php');
+
+    if (isset($_COOKIE['lembrar'])) {
+        $user = $_COOKIE['user'];
+        $password = $_COOKIE['password'];
+        $sql = MySql::conectar()->prepare("SELECT * FROM `tb_admin.users` WHERE user = ? AND password = ? ");
+        $sql->execute(array($user,$password));
+        if ($sql->rowCount() == 1) {
+            $info = $sql->fetch();
+            $_SESSION['login'] = true;
+            $_SESSION['user'] = $user;
+            $_SESSION['password'] = $password;
+            $_SESSION['nome'] = $info['nome'];
+            $_SESSION['cargo'] = $info['cargo'];
+            $_SESSION['img'] = $info['img'];
+            header('Location: '.INCLUDE_PATH_PAINEL.'home');
+            die();
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +39,11 @@
         <form method="POST">
             <input type="email" name="email" placeholder="E-mail..." required />
             <input type="password" name="password" placeholder="Senha..." required />
+            <div class="form-group-login left">
+                <input type="checkbox" name="lembrar">
+                <label for="">Lembrar-me</label>
+            </div>
+            <div class="clear"></div>
             <div class="btn-login">
                 <input type="submit" name="acao" value="Entrar">
                 <a href="<?php echo INCLUDE_PATH; ?>">Home</a>
@@ -48,6 +71,11 @@
             $_SESSION['nome'] = $info['nome'];
             $_SESSION['cargo'] = $info['cargo'];
             $_SESSION['img'] = $info['img'];
+            if (isset($_POST['lembrar'])) {
+                setcookie('lembrar', true, time()+(60*60*60),'/');
+                setcookie('user', $user, time()+(60*60*60),'/');
+                setcookie('password', $password, time()+(60*60*60),'/');
+            }
             header('Location: '.INCLUDE_PATH_PAINEL.'home');
             die();
         } else {
