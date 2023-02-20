@@ -42,7 +42,7 @@
 
         <div class="items-menu">
             <h2>Cadastro</h2>
-            <a <?php selecionadoMenu('cadastrar-depoimentos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-depoimentos">Cadastrar Depoimentos</a>
+            <a <?php selecionadoMenu('cadastrar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-projetos">Cadastrar Projetos</a>
             <a <?php selecionadoMenu('cadastrar-servicos'); ?> href="">Cadastrar Serviços</a>
             <a <?php selecionadoMenu('cadastrar-slides'); ?> href="">Cadastrar Slides</a>
         
@@ -78,8 +78,8 @@
     <?php Painel::loadPage(); ?>
 
 </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
     <script src="https://kit.fontawesome.com/ccff9e51ab.js" crossorigin="anonymous"></script>
 </body>
 </html>
