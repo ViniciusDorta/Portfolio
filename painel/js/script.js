@@ -1,5 +1,12 @@
-$(function () {
+var htmlBtns = '';
 
+$(document).ready(function () {
+    htmlBtns += `<div class"btn-acoes"><i class="fa-solid fa-pen-to-square"></i> 
+                <i class="fa-solid fa-xmark"></i></div>`;
+    document.getElementById('btn-acoes').innerHTML = htmlBtns;
+});
+
+$(function () {
     var open = true;
     var windowSize = $(window)[0].innerWidth;
 

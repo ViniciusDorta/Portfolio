@@ -36,23 +36,23 @@
             <?php endif ; ?>
             <div class="nome-usuario">
                 <p><?php echo $_SESSION['nome']; ?></p>
-                <a <?php selecionadoMenu('home'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>home"><?php echo $cargo = Cargo::pegaCargo($_SESSION['cargo']); ?></a>
+                <a <?php selecionadoMenu('home'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>home" ><?php echo $cargo = Cargo::pegaCargo($_SESSION['cargo']); ?></a>
             </div>
         </div>
 
         <div class="items-menu">
             <h2>Cadastro</h2>
-            <a <?php selecionadoMenu('cadastrar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-projetos">Cadastrar Projetos</a>
+            <a <?php selecionadoMenu('cadastrar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-projetos" >Cadastrar Projetos</a>
             <a <?php selecionadoMenu('cadastrar-servicos'); ?> href="">Cadastrar Serviços</a>
             <a <?php selecionadoMenu('cadastrar-slides'); ?> href="">Cadastrar Slides</a>
         
             <h2>Gestão</h2>
-            <a <?php selecionadoMenu('listar-depoimentos'); ?> href="">Listar Depoimentos</a>
+            <a <?php selecionadoMenu('listar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-projetos">Listar Projetos</a>
             <a <?php selecionadoMenu('listar-servicos'); ?> href="">Listar Serviços</a>
             <a <?php selecionadoMenu('listar-slides'); ?> href="">Listar Slides</a>
         
             <h2>Administração do Painel</h2>
-            <a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>editar-usuario">Editar Usuário</a>
+            <a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>editar-usuario" >Editar Usuário</a>
             <a <?php selecionadoMenu('adicionar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>adicionar-usuario">Adicionar Usuário</a>
 
             <h2>Configuração Geral</h2>
