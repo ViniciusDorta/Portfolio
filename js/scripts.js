@@ -1,5 +1,22 @@
 $(document).load("includes/ajax-usuario-online.php").load("includes/ajax-contador-visitas.php");
 
+$(document).ready(function () {
+    var htmlProjeto = '';
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: 'includes/ajax-listar-projetos.php',
+        async: false,
+        success: function (response) {
+            $.each(response, function (e, data) {
+                htmlProjeto += `<p class="nome-projeto">${data.nome}</p>
+                <p class="descricao-projeto">${data.descricao} <a style="text-decoration: none; color: #fff; font-weight: 700;" href="${data.link}">Acesse aqui.</a></p>`
+            });
+            document.getElementById('projeto_single').innerHTML = htmlProjeto;
+        }
+    })
+})
+
 $(function () {
     //Aqui vai todo o código de javascript
     $('nav.mobile').click(function () {
@@ -35,6 +52,9 @@ $(function () {
         $('[realtime]').click(function () {
             var page = $(this).attr('realtime');
             $('.container-principal').load('../pages/' + page + '.php');
+
+            $('.container-principal').fadeIn(1000);
+            window.history.pushState('', '', page);
 
             return false;
         });

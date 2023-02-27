@@ -1,4 +1,10 @@
 <?php
+    if (isset($_GET['excluir'])) {
+        $idExcluir = intval($_GET['excluir']);
+        Painel::deletar('tb_site.projetos', $idExcluir);
+        Painel::redirect(INCLUDE_PATH_PAINEL.'listar-projetos');
+    }
+
     $projetos = Painel::selectAll('tb_site.projetos');
 ?>
 
@@ -20,7 +26,12 @@
                 <td><?php echo $value['nome']; ?></td>
                 <td><?php echo $value['link']; ?></td>
                 <td><?php echo $value['descricao']; ?></td>
-                <td id="btn-acoes"></td>
+                <td>
+                    <div class="btn-acoes">
+                        <a class="editar" href="<?php echo INCLUDE_PATH_PAINEL ?>editar-projeto?id=<?php echo $value['id'] ?>" id="btn-editar"></a>
+                        <a class="excluir" actionBtn="delete" href="<?php echo INCLUDE_PATH_PAINEL ?>listar-projetos?excluir=<?php echo $value['id'] ?>" id="btn-excluir"></a>
+                    </div>
+                </td>
             </tr>
         <?php } ?>
     </table>

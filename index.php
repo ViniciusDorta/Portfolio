@@ -82,8 +82,6 @@
             } else {
                 include('pages/home.php');
             }
-            
-            include('pages/404.php');
         }
         ?>
     </div>

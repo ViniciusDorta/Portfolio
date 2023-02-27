@@ -1,9 +1,13 @@
-var htmlBtns = '';
+var htmlEditar = '';
+var htmlExcluir = '';
 
 $(document).ready(function () {
-    htmlBtns += `<div class"btn-acoes"><i class="fa-solid fa-pen-to-square"></i> 
-                <i class="fa-solid fa-xmark"></i></div>`;
-    document.getElementById('btn-acoes').innerHTML = htmlBtns;
+    htmlEditar += `
+        <i class="fa-solid fa-pen-to-square"></i>`;
+    document.getElementById('btn-editar').innerHTML = htmlEditar;
+    htmlExcluir += `
+        <i class="fa-solid fa-rectangle-xmark"></i></div>`;
+    document.getElementById('btn-excluir').innerHTML = htmlExcluir;
 });
 
 $(function () {
@@ -72,4 +76,13 @@ $(function () {
             }
         });
     }
+
+    $('[actionBtn=delete').click(function () {
+        var result = confirm("Deseja excluir esse Projeto?");
+        if (result === true) {
+            return true;
+        } else {
+            return false;
+        }
+    })
 });

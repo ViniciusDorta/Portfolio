@@ -509,14 +509,20 @@ table td {
     padding: 5px;
 }
 
-.btn-acoes i {
+.btn-acoes {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
     transition: 0.1s;
 }
 
+.btn-acoes i {
+    font-size: 20px;
+    padding: 10px;
+}
+
 .fa-pen-to-square:hover,
-.fa-xmark:hover {
+.fa-rectangle-xmark:hover {
     transform: scale(1.5);
     cursor: pointer;
 }
@@ -525,8 +531,20 @@ table td {
     color: #5056a0;
 }
 
-.fa-xmark {
+.editar {
+    background: #a595fda6;
+    border-radius: 10px;
+    border: none;
+}
+
+.fa-rectangle-xmark {
     color: #ff0000;
+}
+
+.excluir {
+    background: #f15e5e96;
+    border-radius: 10px;
+    border: none;
 }
 
 /*   RESPONSIVO   */
