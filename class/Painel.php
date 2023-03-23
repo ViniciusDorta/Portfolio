@@ -96,11 +96,11 @@
             @unlink('uploads/' . $file);
         }
 
-        public static function insert($projeto) {
+        public static function insert($param) {
             $certo = true;
-            $nome_tabela = $projeto['nome_tabela'];
+            $nome_tabela = $param['nome_tabela'];
             $query = "INSERT INTO `$nome_tabela` VALUES (null";
-            foreach ($projeto as $key => $value) {
+            foreach ($param as $key => $value) {
                 $nome = $key;
                 $valor = $value;
                 if ($nome == 'acao' || $nome == 'nome_tabela') {

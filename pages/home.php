@@ -128,9 +128,7 @@
             <h2 class="title">
                 Projetos Desenvolvidos
             </h2>
-            <div class="depoimento-single" id="projeto_single">
-                
-            </div>
+            <div class="depoimento-single" id="projeto_single"></div>
             <!--depoimento-single-->
         </div>
         <!--w50-->
@@ -138,14 +136,8 @@
             <h2 class="title">
                 Conhecimentos e Cursos Extras
             </h2>
-            <div class="servicos">
-                <ul>
-                    <li>There are many variations of passages of Lorem Ipsum available.</li>
-                    <li>There are many variations of passages of Lorem Ipsum available.</li>
-                    <li>There are many variations of passages of Lorem Ipsum available.</li>
-                </ul>
-            </div>
-            <!--servicos-->
+            <div class="conhecimentos" id="cursos_extras"></div>
+            <!--conhecimentos-->
         </div>
         <!--w50-->
         <div class="clear"></div>

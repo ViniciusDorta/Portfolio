@@ -15,6 +15,21 @@ $(document).ready(function () {
             document.getElementById('projeto_single').innerHTML = htmlProjeto;
         }
     })
+    var htmlExtra = '';
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: 'includes/ajax-listar-extras.php',
+        async: false,
+        success: function (response) {
+            $.each(response, function (e, data) {
+                htmlExtra += `<ul>
+                    <li>${data.conhecimento}</li>
+                </ul>`;
+            });
+            document.getElementById('cursos_extras').innerHTML = htmlExtra;
+        }
+    });
 })
 
 $(function () {

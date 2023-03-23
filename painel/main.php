@@ -42,18 +42,18 @@
 
         <div class="items-menu">
             <h2>Cadastro</h2>
-            <a <?php selecionadoMenu('cadastrar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-projetos" >Cadastrar Projetos</a>
-            <a <?php selecionadoMenu('cadastrar-servicos'); ?> href="">Cadastrar Serviços</a>
-            <a <?php selecionadoMenu('cadastrar-slides'); ?> href="">Cadastrar Slides</a>
+            <a <?php selecionadoMenu('cadastrar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-projetos">Cadastrar Projetos</a>
+            <a <?php selecionadoMenu('cadastrar-extras'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-extras">Cadastrar Extras</a>
+            <a <?php selecionadoMenu('cadastrar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-slides">Cadastrar Slides</a>
         
             <h2>Gestão</h2>
             <a <?php selecionadoMenu('listar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-projetos">Listar Projetos</a>
-            <a <?php selecionadoMenu('listar-servicos'); ?> href="">Listar Serviços</a>
-            <a <?php selecionadoMenu('listar-slides'); ?> href="">Listar Slides</a>
+            <a <?php selecionadoMenu('listar-servicos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-servicos">Listar Serviços</a>
+            <a <?php selecionadoMenu('listar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-slides">Listar Slides</a>
         
             <h2>Administração do Painel</h2>
             <a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>editar-usuario" >Editar Usuário</a>
-            <a <?php selecionadoMenu('adicionar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>adicionar-usuario">Adicionar Usuário</a>
+            <a <?php selecionadoMenu('cadastrar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-usuario">Cadastrar Usuário</a>
 
             <h2>Configuração Geral</h2>
             <a <?php selecionadoMenu('config-editar'); ?> href="">Editar</a>
