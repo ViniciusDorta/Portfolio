@@ -1,5 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
-
     verificaPermissaoPagina(2);
 
     if (isset($_POST['acao'])) {
@@ -11,27 +11,99 @@
         $cargo = $_POST['cargo'] ?? '';
 
         if($nome == ''){
-            Painel::alert('erro','Campo nome está vázio!');
+            echo "<script>
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Campo nome está vázio!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            </script>";
         } else if($cargo == ''){
-            Painel::alert('erro','Selecione um cargo!');
+            echo "<script>
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Selecione um cargo!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            </script>";
         } else if($email == ''){
-            Painel::alert('erro','Campo e-mail está vázio!');
+            echo "<script>
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Campo email está vázio!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            </script>";
         } else if($password == ''){
-            Painel::alert('erro','Campo senha está vázio!');
+            echo "<script>
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Campo senha está vázio!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            </script>";
         } else if($img == ''){
-            Painel::alert('erro','Precisa adicionar uma imagem!');
+            echo "<script>
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Precisa adicionar uma imagem!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            </script>";
         } else {
             if($cargo >= $_SESSION['cargo']){
-                Painel::alert('erro', 'Cargo inválido!');
+                echo "<script>
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'error',
+                        title: 'Cargo inválido!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>";
             } else if(Painel::imgValid($img) == false){
-                Painel::alert('erro', 'Formato de imagem inválida!');
+                echo "<script>
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'error',
+                        title: 'Formato de imagem inválida!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>";
             } else if(Usuario::existsUser($email)){
-                Painel::alert('erro', 'Usuário já cadastrado!');
+                echo "<script>
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'error',
+                        title: 'Usuário já cadastrado!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>";
             } else {
                 $usuario = new Usuario();
                 $img = Painel::uploadFile($img);
                 $usuario->insertUser($email, $password, $img, $nome, $cargo);
-                Painel::alert('sucesso', 'Cadastro de '.$nome.' realizado com sucesso!');
+                echo "<script>
+                    Swal.fire({
+                        position: 'top',
+                        icon: 'error',
+                        title: 'Cadastro de ".$nome." realizado com sucesso!',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                </script>";
             }
         }
     }
@@ -39,15 +111,16 @@
 ?>
 
 <div class="box-content">
-    <h1><i class="fa-solid fa-user-plus"></i>Adicionar Usuário</h1>
-    <h3><span>Novo Usuário</span></h3>
+    <h1><i class="fa-solid fa-user-plus"></i>Adicionar usuário</h1>
     <form method="POST" enctype="multipart/form-data">
         <div class="form-group">
+            <label>Nome:</label>
             <input type="text" name="nome" placeholder="Nome usuário..."/>
         </div>
         <div class="form-group">
+            <label>Cargo:</label>
             <select name="cargo" id="cargo">
-                <option hidden disabled selected>Selecione um Cargo</option>
+                <option hidden disabled selected>Selecione um cargo</option>
                 <?php
                     foreach (Cargo::$cargos as $key => $value) {
                         if($key < $_SESSION['cargo']) echo '<option value="'.$key.'">'.$value.'</option>';
@@ -56,17 +129,19 @@
             </select>
         </div>
         <div class="form-group">
+            <label>E-mail:</label>
             <input type="text" name="email" placeholder="E-mail usuário..."/>
         </div>
         <div class="form-group">
+            <label>Senha:</label>
             <input type="password" name="password" placeholder="Digite uma senha..."/>
         </div>
         <div class="form-group label-content">
             <input type="file" id="img" name="img"/>
-            <label for="img">Adicionar Foto</label>
+            <label for="img" style="color:#fff;">Adicionar Foto</label>
         </div>
         <div class="form-group">
-            <input type="submit" name="acao" value="Criar Usuário" />
+            <input type="submit" name="acao" value="Adicionar Usuário" />
         </div>
         <div class="clear"></div>
     </form>

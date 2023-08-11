@@ -1,15 +1,3 @@
-var htmlEditar = '';
-var htmlExcluir = '';
-
-$(document).ready(function () {
-    htmlEditar += `
-        <i class="fa-solid fa-pen-to-square"></i>`;
-    document.getElementById('btn-editar').innerHTML = htmlEditar;
-    htmlExcluir += `
-        <i class="fa-solid fa-rectangle-xmark"></i></div>`;
-    document.getElementById('btn-excluir').innerHTML = htmlExcluir;
-});
-
 $(function () {
     var open = true;
     var windowSize = $(window)[0].innerWidth;

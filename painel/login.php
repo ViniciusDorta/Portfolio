@@ -32,12 +32,14 @@
 
     <title>Backend Portfolio</title>
 </head>
-<body>
+<body style="background-image: url('./image/fundo.jpg');">
     
     <div class="box-login">
         <h2>Login de acesso ao Painel</h2>
         <form method="POST">
+            <label>E-mail:</label>
             <input type="email" name="email" placeholder="E-mail..." required />
+            <label>Senha:</label>
             <input type="password" name="password" placeholder="Senha..." required />
             <div class="form-group-login left">
                 <input type="checkbox" name="lembrar">
@@ -45,14 +47,14 @@
             </div>
             <div class="clear"></div>
             <div class="btn-login">
+                <a href="<?php echo INCLUDE_PATH; ?>">Voltar</a>
                 <input type="submit" name="acao" value="Entrar">
-                <a href="<?php echo INCLUDE_PATH; ?>">Home</a>
             </div>
         </form>
     </div><!--box-login-->
 
     <script src="https://kit.fontawesome.com/ccff9e51ab.js" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
 
@@ -79,7 +81,15 @@
             header('Location: '.INCLUDE_PATH_PAINEL.'home');
             die();
         } else {
-            echo '<div class="erro-box"><i class="fa-solid fa-xmark"></i></i>Usuário ou senha incorretos<i class="fa-solid fa-exclamation"></i></div>';
+            echo "<script>
+                Swal.fire({
+                    position: 'top',
+                    icon: 'error',
+                    title: 'Usuário ou senha incorretos!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            </script>";
         }
     }
         

@@ -9,30 +9,32 @@
 ?>
 
 <div class="box-content">
-    <h1><i class="fa-solid fa-list-check"></i>Listar Projetos</h1>
-    <h3><span>Listando os Projetos</span></h3>
-
+    <h1><i class="fa-solid fa-list-check"></i>Listar projetos</h1>
     <table>
-        <tr>
-            <td>Projeto</td>
-            <td>Link</td>
-            <td>Descrição</td>
-            <td>Ações</td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Projeto</th>
+                <th>Link</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
         <?php
             foreach ($projetos as $key => $value) {
         ?>
-            <tr>
-                <td><?php echo $value['nome']; ?></td>
-                <td><?php echo $value['link']; ?></td>
-                <td><?php echo $value['descricao']; ?></td>
-                <td>
-                    <div class="btn-acoes">
-                        <a class="editar" href="<?php echo INCLUDE_PATH_PAINEL ?>editar-projeto?id=<?php echo $value['id'] ?>" id="btn-editar"></a>
-                        <a class="excluir" actionBtn="delete" href="<?php echo INCLUDE_PATH_PAINEL ?>listar-projetos?excluir=<?php echo $value['id'] ?>" id="btn-excluir"></a>
-                    </div>
-                </td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td><?php echo $value['nome']; ?></td>
+                    <td><?php echo $value['link']; ?></td>
+                    <td><?php echo $value['descricao']; ?></td>
+                    <td>
+                        <div class="btn-acoes">
+                            <a class="editar" href="<?php echo INCLUDE_PATH_PAINEL ?>editar-projetos?id=<?php echo $value['id'] ?>" id="btn-editar"><i class="fa-solid fa-pen-to-square"></i></a>
+                            <a class="excluir" actionBtn="delete" href="<?php echo INCLUDE_PATH_PAINEL ?>listar-projetos?excluir=<?php echo $value['id'] ?>" id="btn-excluir"><i class="fa-solid fa-rectangle-xmark"></i></div></a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
         <?php } ?>
     </table>
 </div>

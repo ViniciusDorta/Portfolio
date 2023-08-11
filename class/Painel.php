@@ -57,15 +57,6 @@
             return $sql->fetchAll();
         }
 
-        public static function alert($type, $message)
-        {
-            if ($type == 'sucesso') {
-                echo '<div class="box-alert sucesso"><i class="fa-solid fa-check"></i> ' . $message . '</div>';
-            } else if ($type == 'erro') {
-                echo '<div class="box-alert erro"><i class="fa-solid fa-xmark"></i> ' . $message . '</div>';
-            }
-        }
-
         public static function imgValid($image)
         {
             if (($image['type'] == 'image/jpeg') || ($image['type'] == 'image/jpg') || ($image['type'] == 'image/png')) {
@@ -152,34 +143,27 @@
             return $sql->fetch();
         }
 
-        public static function update($projeto) {
+        public static function update($arr) {
             $certo = true;
             $first = false;
-            $nome_tabela = $projeto['nome_tabela'];
+            $nome_tabela = $arr['nome_tabela'];
             $query = "UPDATE `$nome_tabela` SET ";
-
-            foreach ($projeto as $key => $value) {
+            foreach ($arr as $key => $value) {
                 $nome = $key;
                 $valor = $value;
-
                 if ($nome == 'acao' || $nome == 'nome_tabela' || $nome == 'id') {
                     continue;
                 }
-
                 if ($value == '') {
                     $certo = false;
                     break;
                 }
-
-                $query.="$nome=?";
-
                 if ($first == false) {
                     $first = true;
                     $query.="$nome=?";
                 } else {
-                    $query.="$nome=?";
-                }
-            
+                    $query.=",$nome=?";
+                }            
                 $parametros[] = $value;
             }
 
@@ -190,5 +174,27 @@
             }
 
             return $certo;
+        }
+
+        public static function generateSlug($str){
+            $str = mb_strtolower($str);
+            $str = preg_replace('/(â|á|ã)/', 'a', $str);
+            $str = preg_replace('/(ê|é)/', 'e', $str);
+            $str = preg_replace('/(í|Í)/', 'i', $str);
+            $str = preg_replace('/(ú)/', 'u', $str);
+            $str = preg_replace('/(ó|ô|õ|Ô)/', 'o', $str);
+            $str = preg_replace('/(_|\/|!|\?|#)/', '', $str);
+            $str = preg_replace('/( )/', '-', $str);
+            $str = preg_replace('/ç/', 'c', $str);
+            $str = preg_replace('/(-[-]{1,})/', '-', $str);
+            $str = preg_replace('/(,)/', '-', $str);
+            $str = strtolower($str);
+            return $str;
+        }
+
+        public static function verificaSlug($nome, $id){
+            $sql = MySql::conectar()->prepare("SELECT * FROM `tb_site.categorias` WHERE nome = ? AND id <> ?");
+            $sql->execute($nome, $id);
+            return $sql->fetch();
         }
     }

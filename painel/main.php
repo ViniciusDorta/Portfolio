@@ -36,27 +36,29 @@
             <?php endif ; ?>
             <div class="nome-usuario">
                 <p><?php echo $_SESSION['nome']; ?></p>
-                <a <?php selecionadoMenu('home'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>home" ><?php echo $cargo = Cargo::pegaCargo($_SESSION['cargo']); ?></a>
+                <p><?php echo $cargo = Cargo::pegaCargo($_SESSION['cargo']); ?></p>
             </div>
         </div>
 
         <div class="items-menu">
-            <h2>Cadastro</h2>
-            <a <?php selecionadoMenu('cadastrar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-projetos">Cadastrar Projetos</a>
-            <a <?php selecionadoMenu('cadastrar-extras'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-extras">Cadastrar Extras</a>
-            <a <?php selecionadoMenu('cadastrar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-slides">Cadastrar Slides</a>
+            <a <?php selecionadoMenu('home'); ?> style="text-align: center;" href="<?php echo INCLUDE_PATH_PAINEL ?>home" ><i class="fa-solid fa-house"></i> Painel de controle</a>
+            <h2><i class="fa-solid fa-folder-plus"></i> Cadastros</h2>
+            <a <?php selecionadoMenu('cadastrar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-slides">Cadastrar slides</a>
+            <a <?php selecionadoMenu('cadastrar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-projetos">Cadastrar projetos</a>
+            <a <?php selecionadoMenu('cadastrar-extras'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-extras">Cadastrar extras</a>
+            <a <?php selecionadoMenu('cadastrar-categorias'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-categorias">Cadastrar categorias</a>
+            <a <?php selecionadoMenu('cadastrar-noticias'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-noticias">Cadastrar notícias</a>
         
-            <h2>Gestão</h2>
-            <a <?php selecionadoMenu('listar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-projetos">Listar Projetos</a>
-            <a <?php selecionadoMenu('listar-servicos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-servicos">Listar Serviços</a>
-            <a <?php selecionadoMenu('listar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-slides">Listar Slides</a>
-        
-            <h2>Administração do Painel</h2>
-            <a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>editar-usuario" >Editar Usuário</a>
-            <a <?php selecionadoMenu('cadastrar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-usuario">Cadastrar Usuário</a>
+            <h2><i class="fa-solid fa-user-gear"></i> Gestão</h2>
+            <a <?php selecionadoMenu('listar-slides'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-slides">Listar slides</a>
+            <a <?php selecionadoMenu('listar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-projetos">Listar projetos</a>
+            <a <?php selecionadoMenu('listar-servicos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-extras">Listar extras</a>
+            <a <?php selecionadoMenu('listar-categorias'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-categorias">Listar categorias</a>
+            <!-- <a <?php selecionadoMenu('listar-noticias'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-noticias">Listar notícias</a> -->
 
-            <h2>Configuração Geral</h2>
-            <a <?php selecionadoMenu('config-editar'); ?> href="">Editar</a>
+            <h2><i class="fa-solid fa-gears"></i> Configuração geral</h2>
+            <a <?php selecionadoMenu('cadastrar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-usuario">Cadastrar usuário</a>
+            <a <?php selecionadoMenu('editar-usuario'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>editar-usuario" >Editar conta</a>
         </div>
     </div>
 </div>
