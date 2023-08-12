@@ -54,7 +54,7 @@
             <a <?php selecionadoMenu('listar-projetos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-projetos">Listar projetos</a>
             <a <?php selecionadoMenu('listar-servicos'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-extras">Listar extras</a>
             <a <?php selecionadoMenu('listar-categorias'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-categorias">Listar categorias</a>
-            <!-- <a <?php selecionadoMenu('listar-noticias'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-noticias">Listar notícias</a> -->
+            <a <?php selecionadoMenu('listar-noticias'); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>listar-noticias">Listar notícias</a>
 
             <h2><i class="fa-solid fa-gears"></i> Configuração geral</h2>
             <a <?php selecionadoMenu('cadastrar-usuario'); ?> <?php verificaPermissaoMenu(2); ?> href="<?php echo INCLUDE_PATH_PAINEL ?>cadastrar-usuario">Cadastrar usuário</a>

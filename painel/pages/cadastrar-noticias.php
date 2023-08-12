@@ -61,19 +61,18 @@
                         'conteudo'=>$conteudo, 
                         'capa'=>$capa,
                         'slug'=>$slug,
-                        'nome_tabela'=>'tb_site.slides'
+                        'nome_tabela'=>'tb_site.noticias'
                     ];
-                    if(Painel::insert($arr)){
-                        echo "<script>
-                            Swal.fire({
-                                position: 'top',
-                                icon: 'success',
-                                title: 'Cadastro do notícia foi realizado com sucesso!',
-                                showConfirmButton: false,
-                                timer: 1500
-                            })
-                        </script>";
-                    }
+                    Painel::insert($arr);
+                    echo "<script>
+                        Swal.fire({
+                            position: 'top',
+                            icon: 'success',
+                            title: 'Cadastro do notícia foi realizado com sucesso!',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    </script>";
                 } else {
                     echo "<script>
                         Swal.fire({
